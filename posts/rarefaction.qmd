@@ -22,7 +22,7 @@ It is baffling to me to see this as a recommendation, considering the evidences 
 
 Rarefaction is a frequent approach in microbiome studies. It consists on subsetting the samples of a study to a threshold of reads, in order to normalise the data and remove the effect of uneven sequencing depth. This is considered to be essential, since variation of sequencing depth is stochastic and can lead to biased results.
 
-Let *M1* and *M2* be two different microbiome samples. If the sequencing depth from *M1* is higher than *M2*, then richness (an alpha-diversity metric) will be higher in *M1* than in *M2*, even if there is no real difference between the two samples. To address this, *M1* is then rarefyied, or the reads of *M1* are subsetted in order to create now an *M1'* with the same sequencing depth as *M2*.
+Let *M1* and *M2* be two different microbiome samples. If the sequencing depth from *M1* is higher than *M2*, then richness (an alpha-diversity metric) will be higher in *M1* than in *M2*, even if there is no real difference between the two samples. To address this, *M1* is then rarefied, or the reads of *M1* are subsetted in order to create now an *M1'* with the same sequencing depth as *M2*.
 
 
 It seems to be a straighforward method to account for sequencing depth, so why all the fuss about it?
@@ -45,7 +45,7 @@ For additional results and to fully understand the issues that rarefaction cause
 
 ## Ok ok, rarefaction is bad. So... what should I do?
 
-I understand how complicated is to navigate in the literature concerning microbiome methodology, especially with so many tools, approaches and opinions. However, in my view, looking at methods that can account for differences in sequencing depth across samples, ranging from simple proportions to more complex ones, such as the variance stabilizing transformation implemented in DESeq2. Using abundance-based metrics with such approaches for beta-diversity or introducing estimates on unobserved species, as suggested [here by Amy D. Willis](https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2019.02407/full), can yield more accurate results than rarefaction.
+I understand how complicated is to navigate in the literature concerning microbiome methodology, especially with so many tools, approaches and opinions. However, in my view, looking at methods that can account for differences in sequencing depth across samples, ranging from simple proportions to more complex ones, such as the variance stabilizing transformation implemented in DESeq2, is useful. Using abundance-based metrics with such approaches for beta-diversity or introducing estimates on unobserved species, as suggested [here by Amy D. Willis](https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2019.02407/full), can yield more accurate results than rarefaction.
 
 Regarding abundance, several count-based models such as the ones for RNASeq - microbiome data is reads per ASV, which is the same structure as transcriptomic data - are frequently used. Other methods such as Dirichlet regressions or ANCOM II address several issues, such as sequencing depth but also the compositional nature of the data (again, a topic for a different post).
 
