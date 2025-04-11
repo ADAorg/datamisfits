@@ -2,7 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/fastq_machine_id.html"
+      "/posts/fastq_machine_id.html",
+      "/posts/rarefaction.html"
     ]
   }
 ]
