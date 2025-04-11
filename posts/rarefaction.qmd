@@ -4,7 +4,7 @@ description: "Rarefaction in microbiome studies - Is it a good idea or just a ba
 author: "André Barros"
 date: "last-modified"
 date-format: long
-draft: true
+draft: false
 categories: 
    - bioinformatics
    - microbiome
